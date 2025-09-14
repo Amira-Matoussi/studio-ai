@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body styling */
+body {
+  font-family: 'Inter', 'system-ui', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+/* Section backgrounds for variety */
+.section-dark {
+  background: linear-gradient(135deg, #0c1e3d 0%, #1a2e4a 100%);
+  color: white;
+}
+
+.section-navy {
+  background: linear-gradient(135deg, #1a2e4a 0%, #2a3f5f 100%);
+  color: white;
+}
+
+.section-light-navy {
+  background: linear-gradient(135deg, #e7eafb 0%, #c8d0f1 100%);
+  color: #0c1e3d;
+}
+
+/* Animated gradient backgrounds */
+.bg-animated {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #6B73FF, #000DFF);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Interactive card effects */
+.card-interactive {
+  transition: all 0.3s ease;
+  transform: translateY(0px);
+}
+
+.card-interactive:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c8d0f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c6689;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a2e4a;
+}
+.clip-blob {
+  border-radius: 2rem; /* fallback */
+  clip-path: path(
+    "M421.5,48.5Q459,97,455.5,164Q452,231,422,289.5Q392,348,325,373.5Q258,399,184,380.5Q110,362,86,294.5Q62,227,69.5,154Q77,81,152,50Q227,19,294.5,25.5Q362,32,421.5,48.5Z"
+  );
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out forwards;
+}
