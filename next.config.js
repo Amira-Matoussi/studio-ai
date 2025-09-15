@@ -1,9 +1,12 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",   // required for `out/` folder
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    unoptimized: true // disable Next.js image optimization
-  }
+    unoptimized: true,
+  },
+  experimental: {
+    serverActions: true, // ensures hybrid/server deployment
+  },
 };
 
 module.exports = nextConfig;
