@@ -1,7 +1,12 @@
 // app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-
+export async function GET() {
+  return NextResponse.json({
+    status: "ok",
+    message: "Contact API is alive. Use POST with { name, email, message }."
+  });
+}
 export async function POST(req: Request) {
   try {
     const { name, email, company, message } = await req.json();
