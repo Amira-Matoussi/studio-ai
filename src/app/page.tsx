@@ -6,7 +6,7 @@ import { ChatbotWidget } from "@/components/chatbot-widget";  // 👈 import it 
 // sections
 import Hero from "./hero";
 import OutImpressiveStats from "./out-impressive-stats";
-import AboutTeam from "./about-team";
+
 import Services from "./services";
 import Testimonial from "./testimonial";
 import Contact from "./contact";
@@ -18,9 +18,7 @@ export default function Campaign() {
       <Hero />
       <OutImpressiveStats />
 
-      <section id="about">
-        <AboutTeam />
-      </section>
+
 
       <section id="services">
         <Services />
